@@ -13,18 +13,18 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.files = Dir["{lib}/**/*"] + ["LICENSE", "README.md"]
+  s.require_paths = ["lib"]
+  s.add_dependency('rlp')
+  s.add_dependency('ethash')
+  s.add_dependency('bitcoin-secp256k1')
+  s.add_dependency('lru_redux')
+  s.add_dependency('ffi')
+  s.add_dependency('digest-sha3')
+  s.add_dependency('block_logger')
+  s.add_dependency('leveldb')
 
-  s.add_dependency('rlp', '0.7.3')
-  s.add_dependency('ethash', '~> 0.2')
-  s.add_dependency('bitcoin-secp256k1', '~> 0.4')
-  s.add_dependency('lru_redux', '~> 1.1')
-  s.add_dependency('ffi', '~> 1.9')
-  s.add_dependency('digest-sha3', '~> 1.1')
-  s.add_dependency('block_logger', '>= 0.1.3')
-  s.add_dependency('leveldb', '0.1.9')
-
-  s.add_development_dependency('rake', '~> 10.5')
-  s.add_development_dependency('minitest', '5.8.3')
-  s.add_development_dependency('yard', '>= 0.9')
-  s.add_development_dependency('serpent', '~> 0.3')
+  s.add_development_dependency('rake')
+  s.add_development_dependency('minitest')
+  s.add_development_dependency('yard')
+  #s.add_development_dependency('serpent')
 end
